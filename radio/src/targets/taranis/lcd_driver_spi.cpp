@@ -165,7 +165,7 @@ void lcdStart()
   lcdWriteCommand(0x0A); // Set Vop
   lcdWriteCommand(0xa6); // Set display mode
 #else
-  lcdWriteCommand(0xe2); // (14) Soft reset
+  /*lcdWriteCommand(0xe2); // (14) Soft reset
   lcdWriteCommand(0xa1); // Set seg
   lcdWriteCommand(0xc0); // Set com
   lcdWriteCommand(0xf8); // Set booster
@@ -175,7 +175,25 @@ void lcdStart()
   lcdWriteCommand(0x2f); // All built-in power circuits on
   lcdWriteCommand(0x81); // Set contrast
   lcdWriteCommand(0x36); // Set Vop
-  lcdWriteCommand(0xa6); // Set display mode
+  lcdWriteCommand(0xa6); // Set display mode*/
+
+
+  lcdWriteCommand(0x40); // Display start line 0
+  lcdWriteCommand(0xA1); // ADC reverse
+  lcdWriteCommand(0xC0); // Normal COM0~COM63
+  lcdWriteCommand(0xA6); // Display normal
+  lcdWriteCommand(0xA2); // Set bias 1/9
+  lcdWriteCommand(0x2f);
+  lcdWriteCommand(0xf8);
+  lcdWriteCommand(0x00);
+  lcdWriteCommand(0x27);
+  lcdWriteCommand(0x81);
+  lcdWriteCommand(0x16);
+  lcdWriteCommand(0xAC);
+  lcdWriteCommand(0x00);
+  lcdWriteCommand(0xAF);
+
+
 #endif
 #if defined(BOOT)
   lcdSetRefVolt(LCD_CONTRAST_DEFAULT);
