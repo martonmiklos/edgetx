@@ -247,6 +247,7 @@ void boardInit()
 
 void boardOff()
 {
+  return;
 #if defined(STATUS_LEDS) && !defined(BOOT)
   ledOff();
 #endif

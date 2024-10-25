@@ -345,7 +345,7 @@ void ledBlue();
 #elif defined(RADIO_TPRO) || defined(RADIO_FAMILY_JUMPER_T12) || defined(RADIO_TPRO) || defined(RADIO_COMMANDO8) || defined(RADIO_T12MAX)
   #define LCD_CONTRAST_DEFAULT          25
 #else
-  #define LCD_CONTRAST_DEFAULT          15
+  #define LCD_CONTRAST_DEFAULT          32
 #endif
 #if defined(OLED_SCREEN)
   // add offset 2px because driver (SH1106) of the 1.3 OLED is for a 132 display

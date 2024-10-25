@@ -114,7 +114,7 @@
   #define KEYS_GPIO_PIN_ENTER           LL_GPIO_PIN_10 // PA.10
 #else
   #define KEYS_GPIO_REG_ENTER           GPIOA
-  #define KEYS_GPIO_PIN_ENTER           LL_GPIO_PIN_13 // PA.13
+  #define KEYS_GPIO_PIN_ENTER           LL_GPIO_PIN_15 // PA.15
 #endif
   #define KEYS_GPIO_REG_SYS             GPIOB
   #define KEYS_GPIO_PIN_SYS             LL_GPIO_PIN_4  // PB.04
@@ -2480,7 +2480,7 @@
 
 // LCD driver
 #if defined(RADIO_TX12) || defined(RADIO_TX12MK2) || defined(RADIO_BOXER) || defined(RADIO_ZORRO) || defined(RADIO_POCKET) || defined(RADIO_FAMILY_JUMPER_T12) || defined(RADIO_T8) || defined(RADIO_COMMANDO8) || defined(RADIO_TPRO) || defined(RADIO_TPROV2) || defined(RADIO_TPROS) || defined(RADIO_FAMILY_T20) || defined(RADIO_MT12) || defined(RADIO_T12MAX)
-  #define LCD_VERTICAL_INVERT
+  //#define LCD_VERTICAL_INVERT
 #endif
 #if defined(RADIO_LR3PRO) || defined(RADIO_TPROV2) || defined(RADIO_TPROS) || defined(RADIO_FAMILY_T20) || defined(RADIO_T14)
   #define LCD_HORIZONTAL_INVERT
@@ -2546,7 +2546,7 @@
 #if defined(SSD1309_LCD)
   #define LCD_SPI_PRESCALER             SPI_CR1_BR_1
 #else
-  #define LCD_SPI_PRESCALER             0
+  #define LCD_SPI_PRESCALER             SPI_CR1_BR_2
 #endif
 
 // I2C Bus 1: EEPROM and CAT5137 digital pot for volume control
