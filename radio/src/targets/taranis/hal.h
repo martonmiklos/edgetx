@@ -114,7 +114,7 @@
   #define KEYS_GPIO_PIN_ENTER           LL_GPIO_PIN_10 // PA.10
 #else
   #define KEYS_GPIO_REG_ENTER           GPIOA
-  #define KEYS_GPIO_PIN_ENTER           LL_GPIO_PIN_15 // PA.15
+  #define KEYS_GPIO_PIN_ENTER           LL_GPIO_PIN_10 // PA.10
 #endif
   #define KEYS_GPIO_REG_SYS             GPIOB
   #define KEYS_GPIO_PIN_SYS             LL_GPIO_PIN_4  // PB.04
@@ -2546,7 +2546,7 @@
 #if defined(SSD1309_LCD)
   #define LCD_SPI_PRESCALER             SPI_CR1_BR_1
 #else
-  #define LCD_SPI_PRESCALER             SPI_CR1_BR_2
+  #define LCD_SPI_PRESCALER             0
 #endif
 
 // I2C Bus 1: EEPROM and CAT5137 digital pot for volume control
